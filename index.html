@@ -1,101 +1,487 @@
 <!doctype html>
-<html lang="en">
+<html lang="es-AR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Marcos Monferrán</title>
 
+  <meta
+    name="description"
+    content="Página personal de Marcos Monferrán."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;1,400&display=swap"
+    rel="stylesheet"
+  >
+
   <style>
+    :root {
+      --paper: #faf9f5;
+      --ink: #171717;
+      --muted: #69655f;
+      --blue: #173f73;
+      --rule: #222222;
+      --soft-rule: #d8d3c9;
+      --width: 790px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      max-width: 760px;
-      margin: 70px auto;
-      padding: 0 22px;
-      background: #f7f6f2;
-      color: #181818;
-      font-family: Georgia, "Times New Roman", serif;
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "STIX Two Text", Georgia, serif;
       font-size: 18px;
-      line-height: 1.65;
+      line-height: 1.68;
+      text-rendering: optimizeLegibility;
     }
 
-    h1, h2 {
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    h1 {
-      font-size: 3.2rem;
-      margin-bottom: 0;
-    }
-
-    h2 {
-      margin-top: 45px;
-      padding-top: 25px;
-      border-top: 1px solid #d6d2c9;
-      font-size: 1.2rem;
+    main {
+      width: min(var(--width), calc(100% - 42px));
+      margin: 0 auto;
+      padding: 58px 0 54px;
     }
 
     a {
-      color: #2f6078;
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
     }
 
-    .subtitle {
-      color: #66625d;
+    a:hover,
+    a:focus-visible {
+      text-decoration-thickness: 2px;
+    }
+
+    h1,
+    h2,
+    nav,
+    .quick-links,
+    footer {
+      font-family: "IBM Plex Sans", Arial, sans-serif;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(3rem, 10vw, 5.2rem);
+      line-height: 0.94;
+      letter-spacing: -0.055em;
+      font-weight: 600;
+    }
+
+    .rule {
+      height: 1px;
+      margin: 25px 0 15px;
+      background: var(--rule);
+    }
+
+    .strap {
+      display: grid;
+      grid-template-columns: 82px 1fr 82px;
+      align-items: center;
+      gap: 22px;
+      min-height: 46px;
+    }
+
+    .strap p {
+      margin: 0;
+      text-align: center;
+      font-size: 1.03rem;
+    }
+
+    .header-ornament {
+      position: relative;
+      height: 42px;
+    }
+
+    .header-ornament::before,
+    .header-ornament::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      height: 1px;
+      background: var(--ink);
+    }
+
+    .header-ornament.left::before {
+      left: 0;
+      width: 31px;
+    }
+
+    .header-ornament.left::after {
+      right: 0;
+      width: 18px;
+    }
+
+    .header-ornament.right::before {
+      left: 0;
+      width: 18px;
+    }
+
+    .header-ornament.right::after {
+      right: 0;
+      width: 31px;
+    }
+
+    .header-ornament span {
+      position: absolute;
+      top: 1px;
+      font-family: Georgia, serif;
+      font-size: 31px;
+      line-height: 1;
+    }
+
+    .header-ornament.left span {
+      left: 27px;
+    }
+
+    .header-ornament.right span {
+      right: 27px;
+      transform: scaleX(-1);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px 22px;
+      margin-top: 19px;
+      font-size: 0.9rem;
+    }
+
+    section {
+      padding: 35px 0 31px;
+      border-top: 1px solid var(--soft-rule);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .section-ornament {
+      display: inline-flex;
+      width: 48px;
+      min-width: 48px;
+      height: 35px;
+      align-items: center;
+      justify-content: center;
+      font-family: Georgia, serif;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .section-ornament.eye {
+      font-size: 25px;
+    }
+
+    .section-ornament.star {
+      font-size: 24px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.4rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0 0 1em;
+    }
+
+    .lede {
+      max-width: 735px;
+      font-size: 1.08rem;
+    }
+
+    .copy {
+      max-width: 720px;
+    }
+
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+      margin-top: 23px;
+      font-size: 0.92rem;
+    }
+
+    .documents {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .documents li {
+      padding: 11px 0;
+      border-bottom: 1px solid var(--soft-rule);
+    }
+
+    .documents li:first-child {
+      padding-top: 0;
+    }
+
+    .documents li:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .documents small {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .contact {
+      max-width: 680px;
+    }
+
+    footer {
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 0.81rem;
+    }
+
+    @media (max-width: 620px) {
+      body {
+        font-size: 17px;
+      }
+
+      main {
+        padding-top: 38px;
+      }
+
+      .strap {
+        grid-template-columns: 54px 1fr 54px;
+        gap: 10px;
+      }
+
+      .strap p {
+        font-size: 0.96rem;
+      }
+
+      .header-ornament.left::before,
+      .header-ornament.right::after {
+        width: 15px;
+      }
+
+      .header-ornament.left span {
+        left: 12px;
+      }
+
+      .header-ornament.right span {
+        right: 12px;
+      }
+
+      .section-ornament {
+        width: 39px;
+        min-width: 39px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <h1>Marcos Monferrán</h1>
+  <main>
+    <header>
+      <h1>Marcos Monferrán</h1>
 
-  <p class="subtitle">
-    Physics · University of Buenos Aires<br>
-    Buenos Aires, Argentina
-  </p>
+      <div class="rule"></div>
 
-  <p>
-    <a href="mailto:marcosagustinmonferran@gmail.com">Email</a>
-    ·
-    <a href="assets/Marcos_Monferran_CV.pdf">Curriculum vitae</a>
-  </p>
+      <div class="strap">
+        <div class="header-ornament left" aria-hidden="true">
+          <span>❦</span>
+        </div>
 
-  <h2>About</h2>
+        <p>Física, teoría de cuerdas y holografía</p>
 
-  <p>
-    I have completed all academic requirements for the
-    <em>Licenciatura en Ciencias Físicas</em> at the University of
-    Buenos Aires, including my undergraduate thesis. Degree issuance
-    is pending.
-  </p>
+        <div class="header-ornament right" aria-hidden="true">
+          <span>❦</span>
+        </div>
+      </div>
 
-  <p>
-    My work concerns string theory, holography and quantum field theory.
-  </p>
+      <div class="rule"></div>
 
-  <h2>Research</h2>
+      <nav aria-label="Navegación principal">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#trabajo">Trabajo actual</a>
+        <a href="#textos">Textos</a>
+        <a href="#contacto">Contacto</a>
 
-  <p>
-    <strong>One-loop semiclassical strings in holographic backgrounds</strong><br>
-    Undergraduate thesis at Instituto de Física La Plata, advised by
-    Martin Schvellinger.
-  </p>
+        <a
+          href="assets/Marcos_Monferran_CV.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          CV
+        </a>
+      </nav>
+    </header>
 
-  <p>
-    <strong>Strings and T-duality in Klebanov–Witten holography</strong><br>
-    Current research project on semiclassical strings and Abelian and
-    non-Abelian T-duality.
-  </p>
+    <section id="sobre-mi">
+      <div class="section-title">
+        <span class="section-ornament" aria-hidden="true">☙</span>
+        <h2>Sobre mí</h2>
+      </div>
 
-  <p>
-    <strong>Particle tracking in porous-media experiments</strong><br>
-    Development of a YOLO-based particle-detection and tracking pipeline.
-  </p>
+      <div class="lede">
+        <p>
+          Me formé en Física en la Universidad de Buenos Aires.
+          Me interesan principalmente la teoría de cuerdas, la holografía
+          y la teoría cuántica de campos, además de algunos problemas de
+          gravedad cuántica y física estadística.
+        </p>
 
-  <h2>Education</h2>
+        <p>
+          Vivo en Buenos Aires. Soy vegano y juego al ajedrez.
+        </p>
+      </div>
 
-  <p>
-    <strong>Licenciatura en Ciencias Físicas</strong><br>
-    University of Buenos Aires, 2021–2026.<br>
-    Academic requirements completed. GPA: 9.39/10.
-  </p>
+      <div class="quick-links">
+        <a
+          href="assets/Marcos_Monferran_CV.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          Currículum vitae
+        </a>
+
+        <a href="mailto:marcosagustinmonferran@gmail.com">
+          Correo
+        </a>
+      </div>
+    </section>
+
+    <section id="trabajo">
+      <div class="section-title">
+        <span class="section-ornament eye" aria-hidden="true">◉</span>
+        <h2>Trabajo actual</h2>
+      </div>
+
+      <div class="copy">
+        <p>
+          Mi trabajo reciente salió de mi tesis de licenciatura, en la
+          que estudié correcciones cuánticas a un loop para cuerdas
+          cerradas en fondos holográficos.
+        </p>
+
+        <p>
+          Ahora estoy trabajando en un manuscrito sobre cuerdas plegadas
+          con espín en AdS<sub>3</sub> × S<sup>1</sup>. En paralelo,
+          participo en un proyecto experimental de seguimiento de
+          partículas y mezclado en medios porosos.
+        </p>
+      </div>
+    </section>
+
+    <section id="textos">
+      <div class="section-title">
+        <span class="section-ornament" aria-hidden="true">❧</span>
+        <h2>Textos</h2>
+      </div>
+
+      <ul class="documents">
+        <li>
+          <a
+            href="assets/tesis.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            <em>
+              Cuantización semiclásica a un loop en fondos holográficos
+              de la teoría de supercuerdas de tipo IIB
+            </em>
+          </a>
+
+          <small>Tesis de Licenciatura</small>
+        </li>
+
+        <li>
+          <a
+            href="assets/metodosCovariantes.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            Métodos covariantes para gravedad cuántica
+          </a>
+
+          <small>Monografía de Relatividad General</small>
+        </li>
+
+        <li>
+          <a
+            href="assets/isingMass.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            Cadenas cuánticas de Ising inhomogéneas y masas de Majorana
+            dependientes de la posición
+          </a>
+
+          <small>Monografía de Física del Estado Sólido</small>
+        </li>
+
+        <li>
+          <a
+            href="assets/camposCTP.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            La acción efectiva en el formalismo de Schwinger–Keldysh
+          </a>
+
+          <small>Monografía de Teoría Cuántica de Campos</small>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contacto">
+      <div class="section-title">
+        <span class="section-ornament star" aria-hidden="true">✥</span>
+        <h2>Contacto</h2>
+      </div>
+
+      <div class="contact">
+        <p>
+          Podés escribirme a
+          <a href="mailto:marcosagustinmonferran@gmail.com">
+            marcosagustinmonferran@gmail.com
+          </a>.
+        </p>
+
+        <p>
+          También podés consultar mi
+          <a
+            href="assets/Marcos_Monferran_CV.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            currículum completo
+          </a>.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      Marcos Monferrán · Buenos Aires
+    </footer>
+  </main>
 </body>
 </html>
