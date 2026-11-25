@@ -5,44 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Marcos Monferran | Theoretical Physicist</title>
   <meta name="description" content="Marcos Monferran, theoretical physicist in Buenos Aires. String theory, holography, and quantum field theory.">
-  <meta name="theme-color" content="#fafaf7">
+  <meta name="theme-color" content="#f7f8fd">
   <link rel="canonical" href="https://monferran.github.io/">
   <link rel="icon" href="assets/favicon.png" type="image/png">
-  <link rel="preload" href="assets/fonts/ibm-plex-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Marcos Monferran | Theoretical Physicist">
   <meta property="og:description" content="String theory, holography, and quantum field theory.">
   <meta property="og:url" content="https://monferran.github.io/">
 </head>
-<body class="shell">
+<body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="masthead">
-    <p>Buenos Aires, Argentina</p>
-    <nav aria-label="Main navigation">
-      <a href="#research">Research</a>
-      <a href="#writing">Thesis &amp; notes</a>
-      <a href="assets/Marcos_Monferran_CV.pdf" aria-label="CV (PDF)">CV</a>
-    </nav>
+  <header class="topbar">
+    <div class="shell masthead">
+      <div class="identity">
+        <a class="home" href="#top" aria-label="Marcos Monferran, home">
+          <img src="assets/favicon.png" width="36" height="36" alt="">
+        </a>
+        <p>Buenos Aires, Argentina</p>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#research">Research</a>
+        <a href="#writing">Thesis &amp; notes</a>
+        <a href="https://github.com/Monferran">GitHub</a>
+      </nav>
+    </div>
   </header>
 
-  <main id="main" tabindex="-1">
-    <header id="about" class="intro">
-      <span id="sobre-mi" class="anchor" aria-hidden="true"></span>
-      <h1>Marcos Monferran</h1>
-      <p class="role">Theoretical physicist</p>
-      <p class="bio">My research interests are string theory, holography, and quantum field theory. I studied physics at the Universidad de Buenos Aires and did my thesis research at the Instituto de Física La Plata.</p>
-      <span id="contacto" class="anchor" aria-hidden="true"></span>
-      <div id="contact" class="contact">
-        <a href="mailto:marcosagustinmonferran@gmail.com">Email</a>
-        <a href="https://github.com/Monferran">GitHub</a>
+  <main class="shell" id="main" tabindex="-1">
+    <span id="sobre-mi" class="anchor" aria-hidden="true"></span>
+    <header id="about" class="profile">
+      <div class="profile-copy">
+        <h1>Marcos Monferran</h1>
+        <p class="role">Theoretical physicist</p>
+        <p class="interests">I’m interested in string theory, holography, and quantum field theory.</p>
+        <span id="contacto" class="anchor" aria-hidden="true"></span>
+        <div id="contact" class="contact">
+          <a class="cv" href="assets/Marcos_Monferran_CV.pdf" aria-label="CV (PDF)">
+            CV <span aria-hidden="true">→</span>
+          </a>
+          <a href="mailto:marcosagustinmonferran@gmail.com">Email</a>
+        </div>
       </div>
+      <figure class="featured-plot">
+        <a class="plot-sheet" href="#thesis-figure" aria-label="See both panels of the one-loop energy figure">
+          <span class="plot-title">One-loop energy</span>
+          <img src="assets/t11-energy-charge.webp" width="1817" height="1150" fetchpriority="high"
+            alt="">
+          <span class="plot-footer">
+            <span>AdS<sub>5</sub> × T<sup>1,1</sup></span>
+            <span>Figure V.4(b) <span aria-hidden="true">→</span></span>
+          </span>
+        </a>
+      </figure>
     </header>
 
     <span id="trabajo" class="anchor" aria-hidden="true"></span>
     <section id="research" class="section" aria-labelledby="research-heading">
-      <h2 id="research-heading">Research</h2>
+      <div class="section-heading">
+        <h2 id="research-heading">Research</h2>
+        <p>I studied physics at the Universidad de Buenos Aires and did my thesis research at the Instituto de Física La Plata.</p>
+      </div>
       <div class="research">
         <article>
           <h3>One-loop spectra under T-duality</h3>
@@ -57,12 +82,15 @@
 
     <span id="textos" class="anchor" aria-hidden="true"></span>
     <section id="writing" class="section" aria-labelledby="writing-heading">
-      <h2 id="writing-heading">Thesis and notes</h2>
-      <div>
-        <article>
+      <div class="section-heading">
+        <h2 id="writing-heading">Thesis and notes</h2>
+        <p>The thesis and notes are in Spanish.</p>
+      </div>
+      <div class="documents">
+        <article class="thesis">
           <h3><a href="assets/tesis.pdf">One-Loop Semiclassical Quantization in Holographic Backgrounds of Type IIB Superstring Theory</a></h3>
           <p class="metadata">Licenciatura thesis · Advisor: Martin Schvellinger · Revised November 2026</p>
-          <figure class="figure">
+          <figure class="thesis-figure" id="thesis-figure">
             <figcaption>
               <span>One-loop energy in AdS<sub>5</sub> × T<sup>1,1</sup></span>
               <a href="assets/tesis.pdf#page=71">Figure V.4 in the thesis</a>
@@ -85,7 +113,6 @@
           <li><a href="assets/isingMass.pdf">The Quantum Ising Chain and the <i>c</i> = ½ CFT</a><time datetime="2026">2026</time></li>
           <li><a href="assets/camposCTP.pdf">The Schwinger–Keldysh Effective Action</a><time datetime="2025">2025</time></li>
         </ul>
-        <p class="metadata notes-language">The thesis and notes are in Spanish.</p>
       </div>
     </section>
   </main>
