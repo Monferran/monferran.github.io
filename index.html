@@ -3,138 +3,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Marcos Monferran | Theoretical Physics</title>
-  <meta name="description" content="Marcos Monferran’s research in semiclassical string theory and holography. Research, thesis, notes, and curriculum vitae.">
-  <meta name="theme-color" content="#faf8f2">
+  <title>Marcos Monferran | Theoretical Physicist</title>
+  <meta name="description" content="Marcos Monferran, theoretical physicist in Buenos Aires. String theory, holography, and quantum field theory.">
+  <meta name="theme-color" content="#f9fafb">
   <link rel="canonical" href="https://monferran.github.io/">
   <link rel="icon" href="assets/favicon.png" type="image/png">
-  <link rel="preload" href="assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Marcos Monferran | Theoretical Physics">
-  <meta property="og:description" content="Semiclassical string theory and holography. Research, thesis, and notes.">
+  <meta property="og:title" content="Marcos Monferran | Theoretical Physicist">
+  <meta property="og:description" content="String theory, holography, and quantum field theory.">
   <meta property="og:url" content="https://monferran.github.io/">
 </head>
-<body id="top">
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header shell">
-    <a class="wordmark" href="./">Marcos Monferran</a>
-    <nav aria-label="Main navigation">
-      <a href="#research">Research</a>
-      <a href="#writing">Writing</a>
-      <a href="#about">About</a>
-      <a class="nav-cv" href="assets/Marcos_Monferran_CV.pdf" aria-label="Curriculum vitae (PDF)">
-        CV <span class="out-arrow" aria-hidden="true"></span>
-      </a>
-    </nav>
-  </header>
 
-  <main class="shell" id="main" tabindex="-1">
-    <section class="intro" aria-labelledby="name">
-      <div>
-        <p class="eyebrow">Theoretical physics</p>
-        <h1 id="name">Marcos <span>Monferran</span></h1>
-        <p class="introduction">I study quantum corrections to strings in holographic backgrounds. My current work looks at what happens to those corrections under T-duality.</p>
-        <a class="action" href="#research">Current research <span aria-hidden="true">↓</span></a>
+  <div class="layout">
+    <header class="identity">
+      <h1>Marcos<br> Monferran</h1>
+      <p class="role">Theoretical physicist</p>
+      <p class="location">Buenos Aires, Argentina</p>
+
+      <nav class="links" aria-label="CV and contact">
+        <a href="assets/Marcos_Monferran_CV.pdf" aria-label="CV (PDF)">CV</a>
+        <a href="mailto:marcosagustinmonferran@gmail.com">Email</a>
+        <a href="https://github.com/Monferran">GitHub</a>
+      </nav>
+      <span id="contact" class="anchor" aria-hidden="true"></span>
+      <span id="contacto" class="anchor" aria-hidden="true"></span>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <div id="about" class="introduction">
+        <span id="sobre-mi" class="anchor" aria-hidden="true"></span>
+        <p class="interests">I’m interested in string theory, holography, and quantum field theory.</p>
+        <p>I studied physics at the Universidad de Buenos Aires and did my thesis research at the Instituto de Física La Plata.</p>
       </div>
 
-      <figure class="thesis-figure">
-        <div class="figure-heading">
-          <span>From my thesis</span>
-          <a href="assets/tesis.pdf#page=56">Fig. IV.2(b) <span class="out-arrow" aria-hidden="true"></span></a>
+      <section id="research" aria-labelledby="research-heading">
+        <span id="trabajo" class="anchor" aria-hidden="true"></span>
+        <h2 id="research-heading">Research</h2>
+        <div class="projects">
+          <article>
+            <h3>One-loop spectra under T-duality</h3>
+            <p>I’m looking at when T-duality preserves the one-loop energy of a folded string. I’m writing up the Klebanov–Witten case with Martin Schvellinger and David Jorrín.</p>
+          </article>
+          <article>
+            <h3>AdS/CFT at zero radius</h3>
+            <p>I’m exploring how free <i>N</i> = 4 super Yang–Mills theory is related to type IIB strings on AdS<sub>5</sub> × S<sup>5</sup> in the zero-radius limit.</p>
+          </article>
         </div>
-        <img src="assets/folded-string-energy.webp" width="1120" height="678"
-          alt="Five curves of one-loop energy versus spin at fixed angular momentum. The curves approach a common slope at large spin on the logarithmic axis.">
-        <figcaption>One-loop energy of a folded string in AdS<sub>5</sub> × S<sup>5</sup> as a function of spin.</figcaption>
-      </figure>
-    </section>
+      </section>
 
-    <span id="trabajo" class="legacy-anchor" aria-hidden="true"></span>
-    <section id="research" class="section">
-      <h2>Research</h2>
-      <div class="entries">
-        <article class="entry">
-          <p class="eyebrow">Manuscript in preparation</p>
-          <h3>One-loop spectra under T-duality</h3>
-          <p>With Martin Schvellinger and David Jorrín, I study when Abelian and non-Abelian T-duality preserve periodic fluctuation spectra and one-loop string energies. We apply the result to folded strings in Klebanov–Witten holography.</p>
+      <section id="writing" aria-labelledby="writing-heading">
+        <span id="textos" class="anchor" aria-hidden="true"></span>
+        <h2 id="writing-heading">Thesis and notes</h2>
+
+        <article class="thesis">
+          <h3><a href="assets/tesis.pdf">One-Loop Semiclassical Quantization in Holographic Backgrounds of Type IIB Superstring Theory</a></h3>
+          <p class="document-info">Licenciatura thesis, 2026 · Advisor: Martin Schvellinger</p>
+          <figure class="thesis-figure">
+            <div class="panels">
+              <img src="assets/t11-energy-modulus.webp" width="1013" height="663" loading="lazy"
+                alt="One-loop energy versus the elliptic modulus k. The energy decreases and crosses zero near k = 0.84.">
+              <img src="assets/t11-energy-charge.webp" width="1069" height="677" loading="lazy"
+                alt="One-loop energy versus angular momentum. The numerical data approach the dashed linear fit at larger angular momentum.">
+            </div>
+            <figcaption>One-loop energy of a folded string in AdS<sub>5</sub> × T<sup>1,1</sup>. <a href="assets/tesis.pdf#page=68">Figure V.4 in the thesis</a>.</figcaption>
+          </figure>
         </article>
-        <article class="entry">
-          <p class="eyebrow">Independent research</p>
-          <h3>AdS/CFT at zero radius</h3>
-          <p>I’m investigating a gauged linear sigma model for type IIB strings on AdS<sub>5</sub> × S<sup>5</sup> in the zero-radius limit and its relation to free 𝒩 = 4 super Yang–Mills theory.</p>
-        </article>
-        <article class="entry">
-          <h3>Particle tracking in granular media</h3>
-          <p>At the Faculty of Engineering at UBA, I developed a YOLO-based tracking pipeline to measure how grains mix in a two-dimensional periodic mixer.</p>
-        </article>
-      </div>
-    </section>
 
-    <span id="textos" class="legacy-anchor" aria-hidden="true"></span>
-    <section id="writing" class="section">
-      <div>
-        <h2>Writing</h2>
-        <p class="section-note">The thesis and notes are in Spanish.</p>
-      </div>
-      <ul class="documents">
-        <li>
-          <a href="assets/tesis.pdf" aria-describedby="thesis-detail">
-            <span>
-              <span class="document-meta">Licenciatura thesis · 2026</span>
-              <span class="document-title">One-Loop Semiclassical Quantization in Holographic Backgrounds of Type IIB Superstring Theory</span>
-            </span>
-            <span class="document-format">PDF <span class="out-arrow" aria-hidden="true"></span></span>
-          </a>
-          <p id="thesis-detail">Folded strings in AdS<sub>5</sub> × S<sup>5</sup>, AdS<sub>5</sub> × T<sup>1,1</sup>, and AdS<sub>5</sub>–Schwarzschild × S<sup>5</sup>. Advised by Martin Schvellinger.</p>
-        </li>
-        <li>
-          <a href="assets/metodosCovariantes.pdf">
-            <span>
-              <span class="document-meta">General relativity · 2026</span>
-              <span class="document-title">Covariant Methods for Quantum Gravity</span>
-            </span>
-            <span class="document-format">PDF <span class="out-arrow" aria-hidden="true"></span></span>
-          </a>
-        </li>
-        <li>
-          <a href="assets/isingMass.pdf">
-            <span>
-              <span class="document-meta">Solid state physics · 2026</span>
-              <span class="document-title">The Quantum Ising Chain and the <i>c</i> = ½ CFT</span>
-            </span>
-            <span class="document-format">PDF <span class="out-arrow" aria-hidden="true"></span></span>
-          </a>
-        </li>
-        <li>
-          <a href="assets/camposCTP.pdf">
-            <span>
-              <span class="document-meta">Quantum field theory · 2025</span>
-              <span class="document-title">The Schwinger–Keldysh Effective Action</span>
-            </span>
-            <span class="document-format">PDF <span class="out-arrow" aria-hidden="true"></span></span>
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <span id="sobre-mi" class="legacy-anchor" aria-hidden="true"></span>
-    <section id="about" class="section">
-      <h2>About</h2>
-      <div class="about-copy">
-        <p>I live in Buenos Aires. I completed my Licenciatura in Physics at the Universidad de Buenos Aires in 2026 and did my thesis research at the Instituto de Física La Plata (IFLP, CONICET–UNLP).</p>
-        <p>In July 2026, I presented a poster on the semiclassical quantization of rotating strings at Advances in Quantum Gravity &amp; Strings in La Plata. I also attended the Perimeter–SAIFR–IFT Journeys into Theoretical Physics in São Paulo.</p>
-        <p>Outside physics, I play chess. I’ve been vegan for ten years.</p>
-      </div>
-    </section>
-  </main>
-
-  <span id="contacto" class="legacy-anchor" aria-hidden="true"></span>
-  <footer class="site-footer shell" id="contact">
-    <h2>Contact</h2>
-    <div>
-      <a href="mailto:marcosagustinmonferran@gmail.com">marcosagustinmonferran@gmail.com</a>
-      <a href="https://github.com/Monferran">GitHub <span class="out-arrow" aria-hidden="true"></span></a>
-    </div>
-  </footer>
+        <ul class="notes">
+          <li><a href="assets/metodosCovariantes.pdf">Covariant Methods for Quantum Gravity</a><time datetime="2026">2026</time></li>
+          <li><a href="assets/isingMass.pdf">The Quantum Ising Chain and the <i>c</i> = ½ CFT</a><time datetime="2026">2026</time></li>
+          <li><a href="assets/camposCTP.pdf">The Schwinger–Keldysh Effective Action</a><time datetime="2025">2025</time></li>
+        </ul>
+        <p class="document-info language-note">The thesis and notes are in Spanish.</p>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
