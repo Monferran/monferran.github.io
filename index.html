@@ -5,70 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Marcos Monferran | Theoretical Physicist</title>
   <meta name="description" content="Marcos Monferran, theoretical physicist in Buenos Aires. String theory, holography, and quantum field theory.">
-  <meta name="theme-color" content="#f9fafb">
+  <meta name="theme-color" content="#fafaf7">
   <link rel="canonical" href="https://monferran.github.io/">
   <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="preload" href="assets/fonts/ibm-plex-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Marcos Monferran | Theoretical Physicist">
   <meta property="og:description" content="String theory, holography, and quantum field theory.">
   <meta property="og:url" content="https://monferran.github.io/">
 </head>
-<body>
+<body class="shell">
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="layout">
-    <header class="identity">
-      <h1>Marcos<br> Monferran</h1>
-      <p class="role">Theoretical physicist</p>
-      <p class="location">Buenos Aires, Argentina</p>
+  <header class="masthead">
+    <p>Buenos Aires, Argentina</p>
+    <nav aria-label="Main navigation">
+      <a href="#research">Research</a>
+      <a href="#writing">Thesis &amp; notes</a>
+      <a href="assets/Marcos_Monferran_CV.pdf" aria-label="CV (PDF)">CV</a>
+    </nav>
+  </header>
 
-      <nav class="links" aria-label="CV and contact">
-        <a href="assets/Marcos_Monferran_CV.pdf" aria-label="CV (PDF)">CV</a>
+  <main id="main" tabindex="-1">
+    <header id="about" class="intro">
+      <span id="sobre-mi" class="anchor" aria-hidden="true"></span>
+      <h1>Marcos Monferran</h1>
+      <p class="role">Theoretical physicist</p>
+      <p class="bio">My research interests are string theory, holography, and quantum field theory. I studied physics at the Universidad de Buenos Aires and did my thesis research at the Instituto de Física La Plata.</p>
+      <span id="contacto" class="anchor" aria-hidden="true"></span>
+      <div id="contact" class="contact">
         <a href="mailto:marcosagustinmonferran@gmail.com">Email</a>
         <a href="https://github.com/Monferran">GitHub</a>
-      </nav>
-      <span id="contact" class="anchor" aria-hidden="true"></span>
-      <span id="contacto" class="anchor" aria-hidden="true"></span>
+      </div>
     </header>
 
-    <main id="main" tabindex="-1">
-      <div id="about" class="introduction">
-        <span id="sobre-mi" class="anchor" aria-hidden="true"></span>
-        <p class="interests">I’m interested in string theory, holography, and quantum field theory.</p>
-        <p>I studied physics at the Universidad de Buenos Aires and did my thesis research at the Instituto de Física La Plata.</p>
+    <span id="trabajo" class="anchor" aria-hidden="true"></span>
+    <section id="research" class="section" aria-labelledby="research-heading">
+      <h2 id="research-heading">Research</h2>
+      <div class="research">
+        <article>
+          <h3>One-loop spectra under T-duality</h3>
+          <p>With Martin Schvellinger and David Jorrín, I study how T-duality acts on the fluctuation spectra of folded strings in the Klebanov–Witten background.</p>
+        </article>
+        <article>
+          <h3>AdS/CFT at zero radius</h3>
+          <p>I’m investigating a gauged linear sigma model for the zero-radius limit of type IIB strings on AdS<sub>5</sub> × S<sup>5</sup> and its relation to free <i>N</i> = 4 super Yang–Mills theory.</p>
+        </article>
       </div>
+    </section>
 
-      <section id="research" aria-labelledby="research-heading">
-        <span id="trabajo" class="anchor" aria-hidden="true"></span>
-        <h2 id="research-heading">Research</h2>
-        <div class="projects">
-          <article>
-            <h3>One-loop spectra under T-duality</h3>
-            <p>I’m looking at when T-duality preserves the one-loop energy of a folded string. I’m writing up the Klebanov–Witten case with Martin Schvellinger and David Jorrín.</p>
-          </article>
-          <article>
-            <h3>AdS/CFT at zero radius</h3>
-            <p>I’m exploring how free <i>N</i> = 4 super Yang–Mills theory is related to type IIB strings on AdS<sub>5</sub> × S<sup>5</sup> in the zero-radius limit.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="writing" aria-labelledby="writing-heading">
-        <span id="textos" class="anchor" aria-hidden="true"></span>
-        <h2 id="writing-heading">Thesis and notes</h2>
-
-        <article class="thesis">
+    <span id="textos" class="anchor" aria-hidden="true"></span>
+    <section id="writing" class="section" aria-labelledby="writing-heading">
+      <h2 id="writing-heading">Thesis and notes</h2>
+      <div>
+        <article>
           <h3><a href="assets/tesis.pdf">One-Loop Semiclassical Quantization in Holographic Backgrounds of Type IIB Superstring Theory</a></h3>
-          <p class="document-info">Licenciatura thesis, 2026 · Advisor: Martin Schvellinger</p>
-          <figure class="thesis-figure">
+          <p class="metadata">Licenciatura thesis · Advisor: Martin Schvellinger · Revised November 2026</p>
+          <figure class="figure">
+            <figcaption>
+              <span>One-loop energy in AdS<sub>5</sub> × T<sup>1,1</sup></span>
+              <a href="assets/tesis.pdf#page=71">Figure V.4 in the thesis</a>
+            </figcaption>
             <div class="panels">
-              <img src="assets/t11-energy-modulus.webp" width="1013" height="663" loading="lazy"
-                alt="One-loop energy versus the elliptic modulus k. The energy decreases and crosses zero near k = 0.84.">
-              <img src="assets/t11-energy-charge.webp" width="1069" height="677" loading="lazy"
-                alt="One-loop energy versus angular momentum. The numerical data approach the dashed linear fit at larger angular momentum.">
+              <a href="assets/t11-energy-modulus.webp" title="Open full-size plot">
+                <img src="assets/t11-energy-modulus.webp" width="1722" height="1127" loading="lazy"
+                  alt="One-loop energy versus elliptic modulus k. The energy rises from near zero and then drops sharply as k approaches 1.">
+              </a>
+              <a href="assets/t11-energy-charge.webp" title="Open full-size plot">
+                <img src="assets/t11-energy-charge.webp" width="1817" height="1150" loading="lazy"
+                  alt="One-loop energy versus angular momentum J. The dashed line gives the analytic long-string slope.">
+              </a>
             </div>
-            <figcaption>One-loop energy of a folded string in AdS<sub>5</sub> × T<sup>1,1</sup>. <a href="assets/tesis.pdf#page=68">Figure V.4 in the thesis</a>.</figcaption>
           </figure>
         </article>
 
@@ -77,9 +85,9 @@
           <li><a href="assets/isingMass.pdf">The Quantum Ising Chain and the <i>c</i> = ½ CFT</a><time datetime="2026">2026</time></li>
           <li><a href="assets/camposCTP.pdf">The Schwinger–Keldysh Effective Action</a><time datetime="2025">2025</time></li>
         </ul>
-        <p class="document-info language-note">The thesis and notes are in Spanish.</p>
-      </section>
-    </main>
-  </div>
+        <p class="metadata notes-language">The thesis and notes are in Spanish.</p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
